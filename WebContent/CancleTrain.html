@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MetroKoi - Book your tickets today!</title>
+<link rel="stylesheet" href="UserHome_Css.css">
+<style>
+	body {
+    	background-image: url('img/metrohome.jpg');
+    	font-family: Arial, sans-serif;
+    	margin: 0;
+    	padding: 0;
+    	background-color: #f0f3f6;
+  	}
+  
+  	header {
+    	background-color: #34495e;
+    	color: #fff;
+    	text-align: center;
+    	padding: 20px 0;
+  	}
+  
+  	.hd {
+    	font-size: 24px;
+  	}
+  
+  	.home {
+    	display: inline-block;
+    	margin: 0 10px;
+  	}
+  
+  	.menu a {
+    	color: #fff;
+    	text-decoration: none;
+    	font-weight: bold;
+    	transition: color 0.3s;
+  	}
+  
+  	.menu a:hover {
+    	color: #e74c3c;
+  	}
+  
+  	.content, .additional-content {
+    	border-radius: 10px;
+    	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    	padding: 30px;
+    	color: #333;
+    	text-align: center;
+  	}
+  
+	.additional-content {
+	  background-color: rgba(255, 255, 255, 0.9); /* Slightly less transparent */
+	  border-radius: 10px;
+	  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	  padding: 30px;
+	  margin: 20px 0;
+	  color: #333;
+	  text-align: center;
+	}
+  
+	.additional-content h3 {
+	  font-size: 24px;
+	  margin-bottom: 15px;
+	}
+  
+	.additional-content p {
+	  font-size: 16px;
+	  line-height: 1.5;
+	}
+  
+  	h1 {
+    	text-align: center;
+    	font-size: 30px;
+  	}
+  
+  	.tab.red {
+    	background-color: transparent; /* Make transparent */
+    	border: none; /* Remove border */
+  	}
+  
+  	.tab.red input[type="text"], .tab.red input[type="submit"] {
+    	background-color: #fff; /* White background */
+    	border: 1px solid #ccc;
+    	padding: 5px;
+    	margin: 5px;
+    	color: #333;
+  	}
+  
+  	.tab.red input[type="submit"] {
+    	background-color: #e74c3c;
+    	color: #fff;
+    	cursor: pointer;
+  	}
+  </style>
+</head>
+<body>
+	<header>
+		<h1 class="hd">MetroKoi</h1>
+		<br>
+		<div class="home">
+			<p class="menu">
+				<a href="AdminHome.html">Home</a>
+			</p>
+		</div>
+		<div class="home">
+			<p class="menu">
+				<a href="adminviewtrainfwd">View Trains</a>
+			</p>
+		</div>
+		<div class="home">
+			<p class="menu">
+				<a href="adminsearchtrainfwd">Search By Train Number</a>
+			</p>
+		</div>
+
+		<div class="home">
+			<p class="menu">
+				<a href="addtrainfwd">Add Train</a>
+			</p>
+		</div>
+		<div class="home">
+			<p class="menu">
+				<a href="cancletrainfwd">Delete Train </a>
+			</p>
+		</div>
+		<div class="home">
+			<p class="menu">
+				<a href="updatetrain">Update Train Details</a>
+			</p>
+		</div>
+		<div class="home">
+			<p class="menu">
+				<a href="adminlogout">Logout</a>
+			</p>
+		</div>
+	</header>
+	
+	<h1>Train Cancellation</h1>
+	<form class="tab red" action="admincancletrain" method="post">
+		Train Number:<input type="text" name="trainno"><br />
+		<br /> <input type="submit" value=" CANCEL">
+	</form>
+	<br />
+
+</body>
+</html>

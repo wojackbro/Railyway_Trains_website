@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register</title>
+<link rel="stylesheet" href="UserHome_Css.css">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f3f6;
+  }
+
+  header {
+    background-color: #34495e;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .menu {
+    margin: 0 10px;
+  }
+
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  .menu a:hover {
+    color: #e74c3c;
+  }
+
+  .tab {
+    background-color: #ffe5cc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+  }
+
+  .login-form {
+  	background-color: rgba(249, 249, 249, 0.85); /* Use rgba for transparency */
+  	border-radius: 10px;
+  	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  	padding: 20px;
+  	margin: 0 auto;
+  	max-width: 400px;
+  }
+
+
+  .login-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .login-form input[type="text"],
+  .login-form input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .login-form input[type="submit"] {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .login-form input[type="submit"]:hover {
+    background-color: #c0392b;
+  }
+  
+  .slideshow {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+   overflow: hidden;
+  }
+
+  .slide {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   opacity: 0;
+   background-size: cover; /* Added property */
+   background-position: center; /* Added property */
+   transition: opacity 1s ease-in-out;
+ }
+
+  .slide.active {
+   opacity: 1;
+ }
+
+  .login-form {
+   position: relative;
+   z-index: 1;
+ }
+
+
+
+</style>
+</head>
+<body>
+	<div class="slideshow">
+  		<div class="slide active" style="background-image: url('img/metro1.jpg');"></div>
+  		<div class="slide" style="background-image: url('img/metro2.jpg');"></div>
+  		<div class="slide" style="background-image: url('img/metro3.jpg');"></div>
+  		<div class="slide" style="background-image: url('img/metro4.jpeg');"></div>
+  		<div class="slide" style="background-image: url('img/metro5.jpg');"></div>
+	</div>
+
+  <header>
+    <h1 class="hd">MetroKoi</h1>
+    <div class="main">
+      <span class="menu">
+        <a href="UserLogin.html">Login as User</a>
+      </span>
+      <span class="menu">
+        <a href="UserRegister.html">New User Register</a>
+      </span>
+      <span class="menu">
+        <a href="AdminLogin.html">Login as Admin</a>
+      </span>
+    </div>
+  </header>
+  <div class="tab">Registration</div>
+  <form action="userlogin" class="login-form" method="post">
+    <label for="uname">Email:</label>
+    <input type="text" id="uname" name="uname" placeholder="Enter your email">
+    <label for="pword">Password:</label>
+    <input type="password" id="pword" name="pword" placeholder="Enter your password">
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname" name="fname" placeholder="Enter your first name">
+    <label for="lname">Last Name:</label>
+    <input type="text" id="lname" name="lname" placeholder="Enter your last name">
+    <label for="adrs">Address:</label>
+    <input type="text" id="adrs" name="adrs" placeholder="Enter your address">
+    <label for="phn">Phone:</label>
+    <input type="text" id="phn" name="phn" placeholder="Enter your phone number">
+    <br>
+    <br>
+    <input type="submit" value="Register">
+    <label
+  </form>
+  <script>
+  	const slides = document.querySelectorAll('.slide');
+  	let currentSlide = 0;
+
+  	function showSlide(index) {
+    	slides[currentSlide].classList.remove('active');
+    	slides[index].classList.add('active');
+    	currentSlide = index;
+  	}
+
+  	function nextSlide() {
+    	const nextIndex = (currentSlide + 1) % slides.length;
+    	showSlide(nextIndex);
+  	}
+
+  	setInterval(nextSlide, 3000); // Change slide every 5 seconds
+   </script>
+
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-The repository Railyway_Trains_website is a college project built using Java Spring Boot. It includes frontend components in HTML/CSS and backend logic in Java. The project structure suggests it's a basic railway reservation or train tracking web application. There’s a Dummy-Database.md that may contain example data, and a pom.xml for Maven dependency management.
+The repository Railyway_Trains_website is a project built using Java Spring Boot. It includes frontend components in HTML/CSS and backend logic in Java. The project structure suggests it's a basic railway reservation or train tracking web application. There’s a Dummy-Database.md that may contain example data, and a pom.xml for Maven dependency management.
 
 Repository Structure
 Directories:
